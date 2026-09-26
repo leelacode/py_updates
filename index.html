@@ -4,23 +4,41 @@
 <meta charset="utf-8">
 <link rel="icon" href="https://www.python.org/static/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Python Daily Reading</title>
+<title>Python Daily Reading — September 26, 2026</title>
 <style>
 :root{color-scheme:light dark}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:32px 20px;line-height:1.6;background:#0b1020;color:#e8ecf4}
-header{margin-bottom:28px}h1{margin:0 0 6px;font-size:2rem}.date{color:#9da8bd}
-.card{padding:20px;margin:16px 0;border:1px solid #29334a;border-radius:14px;background:#12192b}
-h2{margin:0 0 8px;font-size:1.2rem}a{color:#8ab4ff}.meta{font-size:.9rem;color:#9da8bd;margin-bottom:10px}
-footer{margin-top:30px;color:#78849b;font-size:.85rem}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:820px;margin:0 auto;padding:34px 20px;line-height:1.65;background:#0b1020;color:#e8ecf4}
+header{margin-bottom:30px}h1{margin:0 0 6px;font-size:2rem}h2{margin:28px 0 8px;font-size:1.25rem}.date{color:#9da8bd}
+p{margin:0 0 12px}.sources{margin-top:34px;padding-top:18px;border-top:1px solid #29334a}.sources a{display:block;margin:7px 0;color:#8ab4ff}
 </style>
 </head>
 <body>
-<header><h1>Python Daily Reading</h1><div class="date">September 26, 2026 · Today's digest</div></header>
+<header>
+<h1>Python Daily Reading</h1>
+<div class="date">September 26, 2026 · ~2 minute read</div>
+</header>
+
 <main>
-<article class="card"><h2>Python documentation is now available in Persian</h2><div class="meta">Python.org · Short read</div><p>The official Python documentation is now available in Persian, extending access to Python's documentation for Persian-speaking developers.</p><a href="https://www.python.org/blogs/">Read on Python.org →</a></article>
-<article class="card"><h2>Python 3.15.0rc2: the final release candidate</h2><div class="meta">Python.org · Release update</div><p>Python 3.15.0rc2 is the final planned release candidate, with around 144 bug fixes, build improvements and documentation changes since rc1. Python 3.15.0 final is scheduled for October 1, 2026.</p><a href="https://www.python.org/downloads/release/python-3150rc2/">Read the release notes →</a></article>
-<article class="card"><h2>Current stable Python releases</h2><div class="meta">Python.org · Release reference</div><p>Python.org currently lists Python 3.14.7 as the latest Python 3 release, alongside maintenance releases for supported branches including 3.13.15 and 3.12.14.</p><a href="https://www.python.org/getit/source/">Check current releases →</a></article>
-<article class="card"><h2>What changed in Python 3.14?</h2><div class="meta">Python.org · Reference</div><p>Python 3.14 includes officially supported free-threaded Python, deferred annotation evaluation, template string literals, multiple interpreters in the standard library, and the new compression.zstd module.</p><a href="https://www.python.org/downloads/release/python-3147/">Explore Python 3.14.7 →</a></article>
+<h2>Python 3.15 is entering the final stretch</h2>
+<p>Python 3.15.0rc2 is still the latest 3.15 preview, and it is the final planned release candidate. The Python core team says it contains roughly 144 bug fixes, build improvements and documentation changes since rc1, with no further ABI changes expected before the planned October 1 final release. This is the point where the ecosystem should be concentrating on compatibility rather than waiting for more language changes: projects that ship native extensions or wheels can test against 3.15 now, while production users should continue treating the release candidate as a preview. The headline 3.15 changes include explicit lazy imports, a built-in <code>frozendict</code> type, a built-in <code>sentinel</code> type, a dedicated profiling package, and broader free-threading support.</p>
+
+<h2>The Python ecosystem is getting better documentation and packaging governance</h2>
+<p>The official Python documentation became available in Persian on September 23, following the recent addition of Russian documentation. This is not a language-runtime change, but it shows continued investment in making the core documentation easier to access. On the packaging side, the newly formed Python Packaging Council held its first meeting on September 18. Its initial work is mostly organizational, with weekly meetings planned to establish how the council will operate. For developers, the practical takeaway is that packaging continues to receive dedicated governance alongside the existing Python Steering Council and PSF structures.</p>
+
+<h2>NumPy 2.5.3 tightens a few edge cases</h2>
+<p>NumPy 2.5.3, released September 6, is a patch release supporting Python 3.12–3.15. Among its fixes, converting fixed-width byte strings to <code>StringDType</code> now raises <code>TypeError</code> for invalid UTF-8 instead of allowing invalid bytes to survive and potentially cause undefined behavior later. It also fixes a stale <code>MaskedArray</code> fill value after dtype-changing ufunc operations. If you work with scientific Python, this is the kind of small maintenance release worth keeping current with, especially as Python 3.15 support becomes more important.</p>
 </main>
-<footer>This page is replaced with a fresh Python reading digest each day. Previous daily content is not retained here.</footer>
-</body></html>
+
+<section class="sources">
+<h2>Sources</h2>
+<a href="https://www.python.org/downloads/release/python-3150rc2/">Python 3.15.0rc2 — Python.org</a>
+<a href="https://blog.python.org/2026/09/python-3150-rc2/">Python Insider — Python 3.15.0 candidate 2</a>
+<a href="https://www.python.org/blogs/">Python.org — latest news and documentation updates</a>
+<a href="https://discuss.python.org/t/notes-from-python-packaging-councils-first-meeting/109203">Python Packaging Council — first meeting notes</a>
+<a href="https://numpy.org/devdocs/release/2.5.3-notes.html">NumPy 2.5.3 release notes</a>
+<a href="https://numpy.org/news/">NumPy — news and release history</a>
+</section>
+
+<footer style="margin-top:28px;color:#78849b;font-size:.85rem">Today's digest replaces the previous day's content.</footer>
+</body>
+</html>
